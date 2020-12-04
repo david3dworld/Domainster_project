@@ -1,0 +1,18 @@
+{
+  "name": "ejs ",
+  "version": "1.0.0",
+  "description": "my EJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kirpal Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "5.0.1",
+    "ejs": "2.5.7",
+    "express": "4.16.2"
+  }
+}

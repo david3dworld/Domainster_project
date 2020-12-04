@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+	<% include ../partials/head %>
+
+<body>
+	<div class="image-container set-full-height" style="background-image: url('assets/img/wizard-city.jpg')">
+		<!--   Webcotec Technology Branding   -->
+		<!--   Big container   -->
+		<div class="container">
+			<div class="row" style="width: 95%; margin-left: auto;margin-right: auto; ">
+				<div class="col-sm-12">
+					<div class="wizard-container" style="margin-bottom:110px ;">
+						<div class="card wizard-card" data-color="purple" id="wizard">
+								<div class="row" style="padding: 20px;margin-left: 20px;margin-right: 20px;">
+									<div class="col-sm-12">
+										<h4 class="info-text h1text"> DOMAIN REGISTRATION</h4>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group ">
+											<label for="owner">OWNER*</label>
+											<input type="text" class="form-control" value="<%= data.owner %>" placeholder="Enter Owner Name" required id="owner" name="owner">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group ">
+											<label for="ipAddress">IP*</label>
+											<input type="text" class="form-control" id="ipAddress" value="<%= data.IP %>" required placeholder="Enter IPV4 Address"
+												name="ipAddress">
+											<span class="errorIp" aria-live="polite"></span>
+										</div>
+									</div>
+									<div class="col-sm-12 ">
+										<div class="form-group">
+											<label for="acquired">ACQUIRED*</label>
+											<input type="text" class="form-control" id="acquired" value="<%= data.acquired %>"  placeholder="Enter Date In Format (YYMMDD)" required name="acquired">
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3 " style="height:110px">
+										<h4>ACTIVELY MARKETED</h4>
+										<div class=" switch-field">
+												<input   type="radio" name="actMarkt" id="actMarktYes" value="Y" <%= (data.actMarkt=='Y') ? "checked" : "" %>>
+												<label   for="actMarktYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio" name="actMarkt" id="actMarktNo" value="N" <%= (data.actMarkt=='N') ? "checked" : "" %>>
+												<label   for="actMarktNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px" >
+											<h4>BRAND PORTFOLIO</h4>
+										<div class=" switch-field">
+												<input   type="radio" name="partBrand"
+													id="partBrandYes" value="Y" <%= (data.partBrand=='Y') ? "checked" : "" %>>
+												<label   for="partBrandYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="partBrand" id="partBrandNo" value="N" <%= (data.partBrand=='N') ? "checked" : "" %>>
+												<label   for="partBrandNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3 " style="height:110px"  >
+											<h4> USE ACRONYM</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useAcronym"
+													id="useAcronymYes" value="Y" <%= (data.useAcronym=='Y') ? "checked" : "" %>>
+												<label   for="useAcronymYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useAcronym" id="useAcronymNo" value="N" <%= (data.useAcronym=='N') ? "checked" : "" %>>
+												<label   for="useAcronymNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3 " style="height:110px"  >
+											<h4>USE AIRLINE</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useAirline"
+													id="useAirlineYes" value="Y" <%= (data.useAirline=='Y') ? "checked" : "" %>>
+												<label   for="useAirlineYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useAirline" id="useAirlineNo" value="N" <%= (data.useAirline=='N') ? "checked" : "" %>>
+												<label   for="useAirlineNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px"  >
+											<h4>USE APPS</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useApps" id="useAppsYes"
+													value="Y" <%= (data.useApps=='Y') ? "checked" : "" %>>
+												<label   for="useAppsYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useApps" id="useAppsNo" value="N" <%= (data.useApps=='N') ? "checked" : "" %>>
+												<label   for="useAppsNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3"  style="height:110px" >
+											<h4>USE ELECTRONICS</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useElectronics"
+													id="useElectronicsYes" value="Y" <%= (data.useElectronics=='Y') ? "checked" : "" %>>
+												<label   for="useElectronicsYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useElectronics" id="useElectronicsNo" value="N" <%= (data.useElectronics=='N') ? "checked" : "" %>>
+												<label   for="useElectronicsNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3  " style="height:110px"  >
+											<h4>USE BANK</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useBank" id="useBankYes"
+													value="Y" <%= (data.useBank=='Y') ? "checked" : "" %>>
+												<label   for="useBankYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useBank" id="useBankNo" value="N" <%= (data.useBank=='N') ? "checked" : "" %>>
+												<label   for="useBankNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px"  >
+											<h4>USE MANUFACTURING</h4>
+										<div class=" switch-field">
+												<input   type="radio" name="useManufacturing"
+													id="useManufacturingYes" value="Y" <%= (data.useManufacturing=='Y') ? "checked" : "" %>>
+												<label   for="useManufacturingYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useManufacturing" id="useManufacturingNo" value="N" <%= (data.useManufacturing=='N') ? "checked" : "" %>>
+												<label   for="useManufacturingNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3 " style="height:110px" >
+											<h4>USE LAST NAME</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useLastName"
+													id="useLastNameYes" value="Y" <%= (data.useLastName=='Y') ? "checked" : "" %>>
+												<label   for="useLastNameYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useLastName" id="useLastNameNo" value="N" <%= (data.useLastName=='N') ? "checked" : "" %>>
+												<label   for="useLastNameNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3  "  style="height:110px" >
+											<h4>USE First Name</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useFirstName"
+													id="useFirstNameYes" value="Y" <%= (data.useFirstName=='Y') ? "checked" : "" %>>
+												<label   for="useFirstNameYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useFirstName" id="useFirstNameNo" value="N" <%= (data.useFirstName=='N') ? "checked" : "" %>>
+												<label   for="useFirstNameNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px" >
+											<h4>USE MEDIA</h4>
+
+										<div class=" switch-field">
+												<input   type="radio" name="useMedia"
+													id="useMediaYes" value="Y" <%= (data.useMedia=='Y') ? "checked" : "" %>>
+												<label   for="useMediaYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useMedia" id="useMediaNo" value="N" <%= (data.useMedia=='N') ? "checked" : "" %>>
+												<label   for="useMediaNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px"  >
+											<h4>USE PLACE</h4>
+
+										<div class=" switch-field">
+												<input   type="radio" name="usePlace"
+													id="usePlaceYes" value="Y" <%= (data.usePlace=='Y') ? "checked" : "" %>>
+												<label   for="usePlaceYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="usePlace" id="usePlaceNo" value="N" <%= (data.usePlace=='N') ? "checked" : "" %>>
+												<label   for="usePlaceNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3 " style="height:110px" >
+											<h4>USE REAL STATE</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useRealState"
+													id="useRealStateYes" value="Y" <%= (data.useRealEstate=='Y') ? "checked" : "" %>>
+												<label   for="useRealStateYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useRealState" id="useRealStateNo" value="N" <%= (data.useRealEstate=='N') ? "checked" : "" %>>
+												<label   for="useRealStateNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px" >
+										<h4>USE RESTURANT</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useResturant"
+													id="useResturantYes" value="Y" <%= (data.useRestaurant=='Y') ? "checked" : "" %>>
+												<label   for="useResturantYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useResturant" id="useResturantNo" value="N" <%= (data.useRestaurant=='N') ? "checked" : "" %>>
+												<label   for="useResturantNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px" >
+											<h4>USE Service</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useService"
+													id="useServiceYes" value="Y" <%= (data.useServices=='Y') ? "checked" : "" %>>
+												<label   for="useServiceYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useService" id="useServiceNo" value="N" <%= (data.useServices=='N') ? "checked" : "" %>>
+												<label   for="useServiceNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px" >
+											<h4>USE SOFTWARE</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useSoftware"
+													id="useSoftwareYes" value="Y" <%= (data.useSoftware=='Y') ? "checked" : "" %>>
+												<label   for="useSoftwareYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useSoftware" id="useSoftwareNo" value="N" <%= (data.useSoftware=='N') ? "checked" : "" %>>
+												<label   for="useSoftwareNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-5 col-sm-4 col-md-3" style="height:110px"  >
+											<h4>USE TRAVEL</h4>
+										<div class=" switch-field">
+											 
+												<input   type="radio" name="useTravel"
+													id="useTravelYes" value="Y" <%= (data.useTravel=='Y') ? "checked" : "" %>>
+												<label   for="useTravelYes">Yes</label>
+												<input   style="margin-left: 15px;" type="radio"
+													name="useTravel" id="useTravelNo" value="N" <%= (data.useTravel=='N') ? "checked" : "" %>>
+												<label   for="useTravelNo">No</label>
+										</div>
+									</div>
+									<div class="col-xs-12">
+											<button> 
+												Submit Form
+												<span role="status" aria-hidden="true"></span>
+												<span class="sr-only">Loading...</span>
+											</button>
+											
+											<span class="errorList" aria-live="polite"></span>
+
+									</div>
+								</div>
+						</div>
+					</div> <!-- wizard container -->
+				</div>
+			</div> <!-- row -->
+		</div> <!--  big container -->
+
+
+	</div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+<!--  Plugin for the Wizard -->
+<script src="assets/js/material-bootstrap-wizard.js"></script>
+
+<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+<script src="assets/js/jquery.validate.min.js"></script>
+
+</html>
