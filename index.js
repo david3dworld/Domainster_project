@@ -17,7 +17,7 @@ const getData = async () => {
     let options={
        secret:'vIIiqhUVN04',
        req: 'find.domain',
-       domain:'mick.com'
+       domain:'sus.com'
      }
       const res = await axios.post(url, options);
       console.log(`Status: ${res.status}`);
