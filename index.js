@@ -17,7 +17,7 @@ const getData = async () => {
     let options={
        secret:'vIIiqhUVN04',
        req: 'find.domain',
-       domain:'sus.com'
+       domain:'mick.com'
      }
       const res = await axios.post(url, options);
       console.log(`Status: ${res.status}`);
@@ -57,7 +57,8 @@ app.get('/', (req, res) => {
       useRestaurant:'Y',
       useServices:'Y',
       useSoftware:'Y',
-      useTravel:'Y'
+      useTravel:'Y',
+      domain:(response.domain !== undefined) ? response.domain : '',
     },
   });
 });
