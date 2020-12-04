@@ -30,7 +30,7 @@ $(document).ready(function() {
             data["ipAddress"] = $("input[name='ipAddress']").val();
             data["secret"]="vIIiqhUVN04";
             data["req"]="update.domain";
-            data["domain"]="hotzone.com";
+            data["domain"]= $("input[name='domain']").val();
             var radioValue = $("input[type='radio']:checked");
             const values = Object.values(radioValue)
             for (value in values){
